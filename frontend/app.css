@@ -1,0 +1,301 @@
+@font-face {
+  font-family: "amethysta";
+  src: url(assets/fonts/Amethysta.ttf);
+}
+
+.centered {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.app {
+  margin-bottom: 50px;
+}
+
+body, html {
+  overflow-x: hidden; /* Voorkomt horizontaal scrollen */
+  max-width: 100vw;    /* Zorgt ervoor dat de breedte niet groter is dan het scherm */
+}
+
+body {
+  background-color: #004051;
+  color: #32FD6B;
+  font-family: "amethysta";
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+input {
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+img {
+  margin: 24px auto;
+  max-width: 264px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.titlebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  background-color: #32FD6B;
+  color: black;
+  box-shadow: black 0 10px 20px;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.titlebar .right-div {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.titlebar .right-div > a {
+  color: #006d8b;
+  padding-left: 10px;
+  border-left: 1px solid black;
+}
+
+.titlebar .right-div > p {
+  padding-right: 10px;
+}
+
+.titlebar .right-div > a:hover {
+  color: #00b5e7;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a7a7a7;
+}
+
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 34px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: #002f3b;
+  box-shadow: black 0 10px 10px;
+  width: 400px;
+}
+
+.login > * {
+  margin: 4px;
+}
+
+.login > input {
+  background-color: #32FD6B50;
+  color: black;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 8px;
+}
+
+.login > .submit {
+  background-color: #004051;
+  color: #32FD6B;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: #32FD6B50;
+}
+
+.category {
+  position: relative;
+  margin: 10px;
+  height: 124px;
+  align-content: center;
+  background-color: #002f3b;
+  border: 2px solid black;
+  border-radius: 20px;
+  color: #32FD6B;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.category:hover {
+  background-color: #004051;
+  box-shadow: #32FD6B 0 0 15px;
+}
+
+.large {
+  font-size: 40px;
+  margin: 0;
+}
+
+ /* Dimmed background overlay */
+ .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);  /* Dimmed background */
+  z-index: 10;
+}
+
+/* Modal content using the same styles as the .login class */
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  width: 300px;
+  padding: 24px;
+  border-radius: 20px;
+  background-color: #002f3b;
+  border: 2px solid black;
+  box-shadow: 5px 5px 10px black;
+}
+
+.modal-content h2 {
+  color: #32FD6B;
+  margin-bottom: 16px;
+}
+
+/* Styles for the form inputs */
+form input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #32FD6B50;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+form button.submit {
+  width: 80%;
+  padding: 10px;
+  background-color: #004051;
+  color: #32FD6B;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button.submit:hover {
+  background-color: #32FD6B;
+  color: black;
+}
+
+/* Close button styling */
+.close-button {
+  width: 80%;
+  margin-top: 20px;
+  background-color: #004051;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.close-button:hover {
+  background-color: #32FD6B;
+  color: black;
+}
+
+.edit-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #32FD6B;
+  border-radius: 10px;
+  color: black;
+  font-size: 14px;
+}
+
+.edit-button:hover {
+  box-shadow: 0 0 10px white;
+}
+
+.delete-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #32FD6B;
+  border-radius: 10px;
+  color: black;
+  font-size: 14px;
+}
+
+.delete-button:hover {
+  box-shadow: 0 0 15px red;
+}
+
+::placeholder {
+  color: black;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.go-back-button {
+  background: #32FD6B;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.go-back-button:hover {
+  box-shadow: 0 0 15px #32FD6B;
+}
+
+/* Screens smaller then 1200px wide */
+@media screen and (max-width: 1200px) {
+  .centered {
+    max-width: 800px;
+  }
+
+  .categories {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+/* Screens smaller then 900px wide */
+@media screen and (max-width: 900px) {
+
+  .titlebar {
+    font-size: 20px;
+  }
+
+  .centered {
+    min-height: 300px;
+    width: 300px;
+  }
+
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
+  .titlebar {
+    width: 300px;
+  }
+}

@@ -1,0 +1,21 @@
+{
+	"name": "vite-svelte-express-ws",
+	"version": "1.0.0",
+	"description": "Template for using Vite, Svelte (not SvelteKit) and Express (for backend API).",
+	"scripts": {
+		"start": "nodemon -w backend backend"
+	},
+	"author": "Jeroen Schoon",
+	"license": "MIT",
+	"dependencies": {
+		"@sveltejs/vite-plugin-svelte": "^3.0.1",
+		"bcrypt": "^5.1.1",
+		"better-sqlite3": "^11.3.0",
+		"cypress": "^13.15.0",
+		"express": "^4.18.2",
+		"nodemon": "^3.0.3",
+		"vite": "^5.0.11",
+		"web-push": "^3.6.7"
+	},
+	"type": "module"
+}
